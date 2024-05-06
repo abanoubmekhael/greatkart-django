@@ -5,8 +5,8 @@ def menu_links (request):
     return dict (links = links)
 
 
-    #dict => 
-        #1- in Choice
+#dict => passing a dictionary to all templates using context_processors
+    #1- in Choice
 
 
 # Try VS Except

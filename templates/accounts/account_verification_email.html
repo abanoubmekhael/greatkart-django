@@ -1,0 +1,11 @@
+<!-- دي صفحة إلجيميل -->
+{% autoescape off %}
+
+Hi {{user.first_name}}
+Please click on below link to confirm your registration 
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token%}
+
+if you think its not to you ignore this email
+
+{% endautoescape %}

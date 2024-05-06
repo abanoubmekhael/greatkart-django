@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'category',
     'accounts',
-    'store',
+    'store', 
     'carts',
 ]
 
@@ -132,6 +132,10 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'greatkart/static')]
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+# Messsges copy & paste
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: "danger",}  #Bootstrab Class
 
 
 
@@ -139,6 +143,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# SMTP Configuration
+# بروتوكول نقل البريد البسيط.
+# يُستخدم لإرسال رسائل البريد الإلكتروني واستلامها عبر الإنترنت 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT= 587
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = 'xjjwykfputozxhjr'
+EMAIL_USE_TLS  = True
+ 
+
+
 
 
 

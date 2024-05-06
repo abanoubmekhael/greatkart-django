@@ -49,12 +49,25 @@ $(document).ready(function() {
 	//////////////////////// Bootstrap tooltip
 	if($('[data-toggle="tooltip"]').length>0) {  // check if element exists
 		$('[data-toggle="tooltip"]').tooltip()
-	} // end if
-
-
-
+    } // end if
+    
 
     
 }); 
+
+
 // jquery end
+setTimeout(
+    function(){
+         $('#message').fadeOut('slow')
+        }, 1000);
+
+
+// setTimeout (
+//             function(){$('#id').fadeOut('slow')}}  
+//             ,    seconds
+//             )    //  كود جي كويري
+// 
+
+
 

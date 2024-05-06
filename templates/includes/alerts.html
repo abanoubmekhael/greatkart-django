@@ -1,0 +1,25 @@
+
+{% if messages %}
+    {% for message in messages %}
+    <div id="message" class="container">
+    <div {% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %} role="alert">
+        <button 
+        type="button" 
+        class="close" 
+        data-dismiss = "alert"> 
+            <span aria-hidden = "true"> &times; </span> </button> <!-- #كتلإبة -->
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}ERROR: {% endif %}
+        {{ message }}
+    </div>
+    </div>
+    {% endfor %}
+
+{% endif %}
+
+    <!--  messages=> رسالة تظهر بعد إجرإت إلفورم -->
+  <!--
+  1. setting file                => copy & paste
+  2. alerts.html file (ininclude) => copy & paste
+  3. in Template: include  
+    copy & paste (django messages)  -->
+
